@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:id="@+id/unit_logo"
+        android:text="UNiT"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textScaleX="2"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_for_heading"
+        android:layout_below="@+id/unit_logo">
+        <ImageView
+            android:layout_width="44sp"
+            android:layout_height="44sp"
+            android:id="@+id/show_image_logo_of_bill"
+            android:src="@drawable/del_app_back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="44sp"
+            android:id="@+id/heading_text"
+            android:layout_toRightOf="@+id/show_image_logo_of_bill"
+            android:textSize="44sp"
+            android:text="Bill Details"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/consumer_name"
+            android:text="Consumer Name"
+            android:textSize="24sp"
+            android:layout_below="@+id/heading_text"
+            android:textAlignment="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tid"
+            android:text="Transaction Id"
+            android:textSize="24sp"
+            android:layout_below="@+id/consumer_name"
+            android:textAlignment="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/product_text"
+            android:text="Product"
+            android:textSize="24sp"
+            android:layout_below="@+id/tid"
+            android:textAlignment="center"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
