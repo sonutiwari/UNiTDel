@@ -4,9 +4,13 @@
     <string name="bill_details">Bill Details</string>
     <string name="name">Consumer Name</string>
     <string name="tid">Transaction Id</string>
-    <string name="product">Product</string>
+    <string name="product"><u>Product</u></string>
     <string name="total_product">Total Product</string>
     <string name="total_price">Total Price</string>
     <string name="selfie">SELFIE</string>
     <string name="submit">SUBMIT</string>
+    <string name="image1description">Image of first payment option</string>
+    <string name="image2description">Image of second ayment option</string>
+    <string name="cashImage">Cash Payment Option</string>
+    <string name="defaultValue">0</string>
 </resources>

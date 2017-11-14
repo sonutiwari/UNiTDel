@@ -3,8 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/content">
-    <TextView
+    android:id="@+id/content"
+    android:layout_margin="10dp">
+    <!---<TextView
         android:layout_width="match_parent"
         android:layout_height="50sp"
         android:id="@+id/unit_logo"
@@ -12,24 +13,27 @@
         android:textAlignment="center"
         android:textSize="40sp"
         android:textColor="@color/colorPrimaryDark"
-        android:textScaleX="2"/>
+        android:textScaleX="2"/>-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/layout_for_heading"
-        android:layout_below="@+id/unit_logo">
+        android:layout_margin="10dp">
         <ImageView
             android:layout_width="44sp"
             android:layout_height="44sp"
             android:id="@+id/show_image_logo_of_bill"
-            android:src="@drawable/del_app_back"/>
+            android:src="@drawable/del_app_back"
+            android:contentDescription="@string/app_name"
+            android:layout_margin="10dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="44sp"
             android:id="@+id/heading_text"
             android:layout_toRightOf="@+id/show_image_logo_of_bill"
             android:textSize="44sp"
-            android:text="@string/bill_details"/>
+            android:text="@string/bill_details"
+            android:layout_margin="10dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,8 +41,9 @@
             android:text="@string/name"
             android:textSize="24sp"
             android:layout_below="@+id/heading_text"
-            android:textAlignment="center"/>
-        <TextView
+            android:textAlignment="center"
+            android:layout_margin="10dp"/>
+        <!--<TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tid"
@@ -53,46 +58,58 @@
             android:text="@string/product"
             android:textSize="24sp"
             android:layout_below="@+id/tid"
-            android:textAlignment="center"/>
+            android:textAlignment="center"/>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/productDescription"
+            android:layout_below="@+id/consumer_name"
+            android:text="@string/product"
+            android:selectAllOnFocus="false"
+            android:linksClickable="false"
+            android:autoLink="all"
+            android:gravity="center_horizontal"
+            android:textSize="24sp"
+            android:layout_margin="10dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/product_text"
+            android:layout_below="@+id/productDescription"
             android:id="@+id/total_product"
             android:text="@string/total_product"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textScaleX="1.2"
-            />
+            android:layout_margin="5dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/total_product"
-            android:layout_below="@+id/product_text"
+            android:layout_below="@+id/productDescription"
             android:id="@+id/total_product_view"
-            android:text="0"
-            android:textSize="24sp"
+            android:text="@string/defaultValue"
+            android:textSize="20sp"
             android:textScaleX="1.2"
-            />
+            android:layout_margin="5dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/product_text"
+            android:layout_below="@+id/productDescription"
             android:layout_toRightOf="@+id/total_product_view"
             android:id="@+id/total_price"
             android:text="@string/total_price"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textScaleX="1.2"
-            />
+            android:layout_margin="5dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/total_price"
-            android:layout_below="@+id/product_text"
+            android:layout_below="@+id/productDescription"
             android:id="@+id/total_price_view"
-            android:text="0"
-            android:textSize="24sp"
+            android:text="@string/defaultValue"
+            android:textSize="20sp"
             android:textScaleX="1.2"
-            />
+            android:layout_margin="5dp"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -102,31 +119,36 @@
             android:textSize="34sp"
             android:layout_centerHorizontal="true"
             android:textScaleX="2.5"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:layout_margin="10dp"/>
 
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/payment_options"
-        android:layout_below="@+id/layout_for_heading">
+        android:layout_below="@+id/layout_for_heading"
+        android:layout_margin="10dp">
         <ImageView
             android:layout_width="120sp"
             android:layout_height="120sp"
-            android:src="@drawable/unit_logo"
-            android:id="@+id/image1"/>
+            android:src="@drawable/paytm_logo"
+            android:id="@+id/image1"
+            android:contentDescription="@string/image1description"/>
         <ImageView
             android:layout_width="120sp"
             android:layout_height="120sp"
-            android:src="@drawable/unit_logo"
+            android:src="@drawable/UPI_Logo"
             android:layout_toRightOf="@+id/image1"
-            android:id="@+id/image2"/>
+            android:id="@+id/image2"
+            android:contentDescription="@string/image2description"/>
         <ImageView
             android:layout_width="120sp"
             android:layout_height="120sp"
-            android:src="@drawable/unit_logo"
+            android:src="@drawable/CASH"
             android:id="@+id/image3"
-            android:layout_toRightOf="@+id/image2"/>
+            android:layout_toRightOf="@+id/image2"
+            android:contentDescription="@string/cashImage"/>
     </RelativeLayout>
     <Button
         android:layout_width="wrap_content"
@@ -136,6 +158,7 @@
         android:layout_alignBottom="@+id/payment_options"
         android:layout_alignParentRight="true"
         android:textSize="24sp"
-        android:textScaleX="1.5"/>
+        android:textScaleX="1.5"
+        android:layout_margin="10dp"/>
 
 </RelativeLayout>
